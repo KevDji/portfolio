@@ -1,5 +1,7 @@
 ---
 
+import '../assets/styles.css';
+
 ---
 
 <html lang="fr">
@@ -7,187 +9,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Portfolio - Djidula kévin DADZIE</title>
-		<style>
-			 body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        /* Header */
-        header {
-            background: #333;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        /* Barre de navigation */
-        nav {
-            background: #444;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            width: 100%;
-            position: relative; /* Par défaut, elle est relative */
-            transition: all 0.3s ease-in-out;
-        }
-
-        nav.fixed {
-            position: fixed; /* Devient fixe après le scroll */
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Espacement pour éviter que le contenu soit caché */
-        .spacer {
-            height: 50px;
-        }
-		#about {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Responsive pour mobile */
-        @media (max-width: 768px) {
-            #about {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .about-image {
-                width: 100%;
-                height: auto;
-            }
-        }
-        /* Contenu */
-        section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .project {
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 10px 0;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-		#contact {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 40px 20px;
-            text-align: center;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        #contact h2 {
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #333;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .contact-item i {
-            font-size: 22px;
-            color: #007BFF;
-        }
-
-        .contact-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .contact-links a {
-            text-decoration: none;
-            color: white;
-            background: #007BFF;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .contact-links a:hover {
-            background: #0056b3;
-        }
-
-        .contact-links a i {
-            font-size: 20px;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .contact-links {
-                flex-direction: column;
-            }
-        }
-		</style>
+			
 	</head>
 <body>
     <header>
@@ -203,6 +25,9 @@
         
     </nav>
     <section id="about">
+        <div class="about-image">
+            <img src="image/profils.jpg" alt="mon profils">
+        </div>
 		
 		<div class="about-text">
 			<h2>À propos de moi</h2>
@@ -219,16 +44,26 @@
     <section id="projects">
         <h2>Site Web</h2>
 		<div class="project">
+            <div class="project-image">
+                <img src="image/hitech1.png" alt="logo a guest">
+            </div>
 			<a href="https://hitech-services.com" target="_blank">HITECH Services</a>
 		</div>
         
             <div class="project">
+                <div class="project-image">
+                    <img src="image/hitech2.png" alt="logo a guest">
+                </div>
 				<a href="https://geoservices.hitech-services.com" target="_blank">HITECH  GeoServices</a></li>
 			</div>
             <div class="project">
+                <div class="project-image">
+                    <img src="image/anasap.jpg" alt="logo a guest">
+                </div>
 				<a href="https://anasaptogo.com" target="_blank">Anasap Togo</a></li>
 			</div>
             <div class="project">
+                
 				<a href="https://icebrandings.com" target="_blank">Icebrandings</a>
 			</div>
 			<section id="projects">
@@ -237,9 +72,10 @@
 			
 					<div class="project">
 						<div class="project-image">
-							
+							<img src="image/arcgis1.png" alt="logo a guest">
 						</div>
 						<div class="project-details">
+                            
 							<h3>Déploiement de la plateforme ArcGIS Server (2022)</h3>
 							<p>Installation et configuration d'ArcGIS Enterprise, déploiement de licences fixes et support technique continu.</p>
 						</div>
@@ -247,7 +83,7 @@
 			
 					<div class="project">
 						<div class="project-image">
-							
+							<img src="image/arcgis2.jpg" alt="logo a guest">
 						</div>
 						<div class="project-details">
 							<h3>Mise en place d’une plateforme SIG web (2022)</h3>
@@ -257,7 +93,7 @@
 			
 					<div class="project">
 						<div class="project-image">
-						
+                            <img src="image/goodis.webp" alt="logo a guest">
 						</div>
 						<div class="project-details">
 							<h3>Migration des plateformes e-commerce Goodis (2023)</h3>
@@ -268,54 +104,6 @@
 				</div>
 			</section>
 			
-			<style>
-				#projects {
-					max-width: 1000px;
-					margin: auto;
-					padding: 50px 20px;
-				}
-			
-				.projects-grid {
-					display: grid;
-					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-					gap: 20px;
-				}
-			
-				.project {
-					background: #f9f9f9;
-					border-radius: 10px;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-					overflow: hidden;
-					transition: transform 0.3s ease-in-out;
-				}
-			
-				.project:hover {
-					transform: scale(1.05);
-				}
-			
-				.project-image img {
-					width: 100%;
-					height: 200px;
-					object-fit: cover;
-				}
-			
-				.project-details {
-					padding: 20px;
-				}
-			
-				.project-details h3 {
-					margin-bottom: 10px;
-					font-size: 20px;
-					color: #333;
-				}
-			
-				.project-details p {
-					font-size: 16px;
-					color: #555;
-				}
-			</style>
-            
-        
     </section>
     <section id="skills">
 		<h2>Compétences</h2>
@@ -350,51 +138,7 @@
 	
 		</div>
 	</section>
-	
-	<style>
-		#skills {
-			max-width: 1000px;
-			margin: auto;
-			padding: 50px 20px;
-			text-align: center;
-		}
-	
-		.skills-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: 20px;
-		}
-	
-		.skill-card {
-			background: #f9f9f9;
-			border-radius: 10px;
-			padding: 20px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-			transition: transform 0.3s ease-in-out;
-		}
-	
-		.skill-card:hover {
-			transform: scale(1.05);
-		}
-	
-		.skill-card h3 {
-			margin-bottom: 10px;
-			font-size: 20px;
-			color: #333;
-		}
-	
-		.skill-card p {
-			font-size: 16px;
-			color: #555;
-		}
-	
-		/* Responsive */
-		@media (max-width: 600px) {
-			.skills-grid {
-				grid-template-columns: 1fr;
-			}
-		}
-	</style>
+
     <section id="contact">
         <h2>Contactez-moi</h2>
         <div class="contact-info">
